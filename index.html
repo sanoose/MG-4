@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="My Memory Game 2.css">
+    <title>Document</title>
+</head>
+<body>
+   
+    <div class="Wins_List"> 
+        <table>
+            <thead> <th  colspan="3"> لوحة الشرف </th></thead>
+                <tbody>
+
+                <tr> 
+               
+                 <td>Time</td>
+                <td>Player Name </td>
+                <td>Rank</td>
+            </tr>
+
+            <!-- <tr> -->
+               
+                <!-- <td>0:04</td>
+                <td>السنوسي </td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>0:04</td>
+                <td>السنوسي </td>
+                <td>2</td>
+                
+            </tr>
+
+            <tr>
+                <td>0:04</td>
+                <td>السنوسي </td>
+                <td>3</td>
+                
+            </tr>
+
+            <tr>
+                <td>0:04</td>
+                <td>السنوسي </td>
+                <td>3</td>
+                
+            </tr> -->
+        </tbody>
+        </table>
+    </div>
+
+    <div class="start"> 
+        <span>Start Game</span>
+        <span class="Easy">Easy</span>
+        <span class="Normal">Normal</span>
+        <div  class="form1">
+           
+            <input type="button" class="txt1" value = 'Enter Your name'> 
+              <input type="text" class="txt"> 
+            <input type="button" class="btn_Ok" value="OK">
+        </div>
+
+     
+        <!-- <div class="div_time_out"> 
+            <span class="t1">Time Out </span>
+            <span class ="t2">Try Again ?</span>
+        </div> -->
+       
+
+    </div> 
+
+    <div class="txt_container">
+       
+        <span> Player :<span class="name"> </span>  </span>  
+           
+            <span class="timer_container"> 
+                <span class="minite">0</span> <span class="colon">:</span>  <span class="Second">0</span> 
+              </span>
+              <span class="try_again">Try Again ?</span>
+            <span class="Result"> Remaining Tries :: <span>8</span> </span>
+            <img src="Images/Reset.png" alt="" > 
+    </div>  
+  
+<div class="Container_All" draggable = 'false' >
+    <div class="cover"> </div>
+    <div class="Container" draggable = 'false' >
+
+       
+        <div class="img_box"  data-img="a" draggable = 'false'>
+                <div class="front face"></div>
+                <div class="back face"> 
+                    <img src="Images/M1/1.jpg"   alt="" draggable = 'false'>
+                </div>
+        </div>
+        <div class="img_box" data-img="a" draggable = 'false'>
+            <div class="front face"></div>
+            <div class="back face">  
+                <img src="Images/M1/1.jpg" alt="" draggable = 'false' >
+            </div>
+    </div>
+
+
+    <div class="img_box"  data-img="b" draggable = 'false'>
+        <div class="front face"></div>
+        <div class="back face"> 
+            <img src="Images/M1/2.jpg" alt="" draggable = 'false' >
+        </div>
+</div>
+<div class="img_box"  data-img="b"  draggable = 'false'>
+    <div class="front face"></div>
+    <div class="back face"> 
+        <img src="Images/M1/2.jpg" alt="" draggable = 'false' >
+    </div>
+</div>
+
+<div class="img_box" data-img="c" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+    <img src="Images/M1/3.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+<div class="img_box" data-img="c" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/3.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+
+<div class="img_box" data-img="d" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/4.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+<div class="img_box" data-img="d" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/4.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+
+<div class="img_box" data-img="e"  draggable = 'false' >
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/5.jpg" alt=""  draggable = 'false' >
+</div>
+</div>
+<div class="img_box" data-img="e" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/5.jpg" alt="" draggable = 'false' >
+</div>
+</div> 
+
+ <div class="img_box" data-img="f" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/6.jpg" alt="" draggable = 'false'  >
+</div>
+</div>
+<div class="img_box" data-img="f" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/6.jpg" alt=""  draggable = 'false' >
+</div>
+</div>
+
+
+<div class="img_box" data-img="g" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/7.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+<div class="img_box" data-img="g" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/7.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+
+<div class="img_box" data-img="h" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/8.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+<div class="img_box" data-img="h" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/8.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+
+<div class="img_box" data-img="i" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/9.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+<div class="img_box" data-img="i" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/9.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+
+<div class="img_box " data-img="j" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/10.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+<div class="img_box  " data-img="j" draggable = 'false'>
+<div class="front face"></div>
+<div class="back face"> 
+<img src="Images/M1/10.jpg" alt="" draggable = 'false' >
+</div>
+</div>
+
+    </div>
+
+</div>
+    <!-- <audio src="sounds/filasound.m4a " id="Fial"  preload="auto"></audio> -->
+    <audio src="sounds/scces sound.m4a " id="success" preload="auto" ></audio>
+    <audio src="sounds/Flip Card Sound.m4a" id="Flip1" preload="auto" ></audio>
+    <script src="My Memory Game  2.js"></script>
+</body>
+</html>

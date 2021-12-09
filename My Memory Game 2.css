@@ -1,0 +1,350 @@
+
+body{
+    /* margin: 0px 0%;  */
+   margin: 0px 7%;
+}
+
+
+/* Start  Start Game  */
+.start {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 , 0 ,0 ,0.8);
+    position: fixed;
+    left: 0px; top: 0px;
+    z-index: 3;
+    display: flex ; 
+    justify-content: center    ;
+    align-items: center;
+}
+.start span:hover {
+    background-color: black; color: crimson;
+}
+.start span {
+    position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%,-50%);
+    font-size: 30px;
+    color: crimson;
+    background-color: silver;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid red;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+  
+} 
+
+.start   .Normal{ 
+    left: 50%; top: 50%; transform: translate(-50%,-50%);   display: none;
+  
+}
+.start   .Easy{ 
+    left: 50%; top: 40%; transform: translate(-50%,-50%);    display: none;
+}
+
+.start .form1 {
+    width: 350px;
+    height: 400px;
+     background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:40px;
+    border: 3px solid white;
+    border-radius: 10px;
+    display: none;
+}
+
+.start .form1 span  ,
+.start .form1 input {
+    background-color: black;
+    color: red;
+    width: 200px;
+    font-size: 30px;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.start .form1 span {
+    font-size: 25px;
+}
+.start .form1  .txt {
+    padding: 10px;
+    text-align: center;
+    caret-color: white; ;
+    color: blue;
+}
+.start .form1 .txt1 {
+    font-size: 20px;
+}
+
+.start .form1 .btn_Ok {
+cursor: pointer;
+}
+/* End Start Game  */
+
+
+/* Start  try again */
+.txt_container .try_again {
+    background-color: black;
+    color: rgb(173, 126, 64);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+.txt_container .try_again:hover {background-color: crimson; color: black;}
+/* End   Start Game  */
+
+
+/* Start   Player Info  */
+
+
+.txt_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: midnightblue;
+    color: white;
+    border-radius: 5px; border: 3px solid black;
+    width: 90%;
+    position: fixed;
+    left: 50%;
+    top: 6%;
+    transform: translate( -50% ,  -50%);
+    font-size: 30px;
+    padding: 10px;
+    z-index: 1;
+    /* padding-left: 45px; */
+  
+}
+
+.txt_container  img {
+    position: absolute;
+    bottom: -41px; left: 50%; 
+    transform: translateX(-50%);
+    width: 30px; height : 30px; 
+    cursor: pointer;
+}
+/* End    Player Info  */
+
+
+
+.Container {
+    /* background-color: blue; */
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    width: 870px;
+    /* height: 600px;  */
+    /* height: 600px; */
+   
+    padding-left: 7%;
+    /* padding-top: 20px; */
+    margin:130px auto 0px auto;
+}
+.Container_All {
+    margin-top:130px ;
+}
+
+.Container .img_box  { 
+ 
+position: relative;
+background-color: black;
+width: 110px;
+height: 110px;
+padding: 10px;
+transform-style: preserve-3d ;
+transition: transform 0.5s;
+border: 5px solid crimson;
+cursor: pointer;
+}
+
+.Container .img_box:hover  {
+    background-color: yellowgreen;
+}
+
+.face{
+    backface-visibility :hidden ;
+
+}
+.front{ 
+
+}
+.front::before{
+    content: '?';
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50% , -50%);
+    left: 50%; top: 50%;
+}
+.back{
+    transform: rotateY(180deg);
+}
+
+.Container .img_box img {
+    width: 110px;
+    width: 110px;
+    user-select : none ;
+    animation:  Move 3s infinite linear;
+}
+
+@keyframes Move {
+  
+    0%{transform: translatey(0%);}
+    20%{transform: translatey(-5%);}
+    70%{transform: translatey(5%);}
+    100%{transform: translatey(0%);}
+}
+.Container .img_box.is-flipped ,
+.Container .img_box.S_class{
+  transform: rotateY(180deg);
+}
+
+.double_Click ,
+.Container .img_box.S_class{
+    pointer-events: none;
+}
+.Container_All{
+    position: relative;
+}
+.cover{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    left: 0px; top: 0px;
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 4;
+    display: none;
+
+}
+
+
+/* Start   Win List  */
+
+.Wins_List {
+ width: 40%; background-color: rgb(192, 103, 140);
+
+ transition: transform 1s    linear ;
+
+ position: fixed;
+ left: 50%; top: 50%;
+ transform: translate(-50% , -1200%);
+ z-index: 2;
+
+
+}
+.Wins_List table {
+    font-size: 30px;  color: white;
+    width: 100%;
+    
+}
+.Wins_List table thead th  {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    background-color: slateblue;
+  }
+  tr:nth-child(1) {
+      background-color: slateblue;
+  }
+.Wins_List table tr:nth-child(2) {background-color: black; color: red;} 
+tr:nth-child(3) {
+    background-color: orangered; color: black;
+}
+tr:nth-child(4)  {
+    background-color: rebeccapurple; color: greenyellow;
+}
+
+.Wins_List table tr td {border-bottom: 1px solid black; text-align: right;}
+/* End Wins List  */
+
+
+/* Mobile Size  */
+@media (max-width : 950px) {
+    .txt_container .try_again {
+        font-size: 15px;
+    }
+
+    .txt_container{
+        font-size: 15px;
+    }
+
+
+    .txt_container .name{}
+
+.txt_container .Result{}
+
+
+.Container{
+    width: 90%;
+
+}
+.Container .img_box {
+    width: 80px ; height: 90px;
+}
+.Container .img_box img {
+    width: 80px;
+    height: 89px;
+}
+
+}
+
+@media (max-width : 550px) {
+
+    .txt_container .try_again {
+        font-size: 9px;
+    }
+
+    .txt_container{
+        font-size: 9px;
+    }
+
+
+    /* .txt_container .name{}
+
+.txt_container .Result{} */
+
+
+    .Container{
+        width: 100%;
+        padding: 0px;
+        margin-left: 16px;
+        /* background-color: red; */
+        /* margin: 0px; */
+        /* margin: 0px; */
+    }
+    .Container .img_box {
+       
+        width:30px ; height: 45px;
+       /* margin-right: 7px; */
+       /* padding: 10px; */
+    }
+    .Container .img_box  .back {
+        margin-top: -11px;
+        margin-right: -10px;
+        /* background-color: red; */
+    /* padding: 10px; */
+}
+    .Container .img_box img {
+
+        width: 51px;
+        height: 67px;
+    }
+
+    .front::before{font-size: 40px;}
+
+    .Wins_List { 
+         width: 90%;
+    }
+.Wins_List table {
+    font-size: 17px;
+ }
+/* .Wins_List table thead th  {}
+.Wins_List table tr {}
+.Wins_List table tr td {} */
+ }
